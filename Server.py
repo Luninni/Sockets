@@ -30,6 +30,6 @@ while True:
     client, addr = server.accept()  # Acepting client
     print ('[SERVER] Client' + str(client.getpeername()) + 'connected!')
     msg = client.recv(MSG_BUFFER)
-    client.send('Bienvenido','prueba')
+    client.send(b'Bienvenido')
     client.close()
     #print('<'+str(sclient.getpeername())+'>: '+ str(msg))
